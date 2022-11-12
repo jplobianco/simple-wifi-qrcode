@@ -5,7 +5,7 @@ import random
 
 import qrcode as qrcode_lib
 
-from wifi_qrcode_generator import wifi
+from simple_wifi_qrcode import wifi
 
 
 def generate_wifi_qrcode(

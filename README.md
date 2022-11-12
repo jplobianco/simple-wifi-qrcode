@@ -1,11 +1,11 @@
-# wifi-qrcode-generator
+# simple-wifi-qrcode
 
 Generates QR Code to join wifi networks
 
 ## Installation
 
 ```
-python -m pip install wifi-qrcode-generator
+python -m pip install simple-wifi-qrcode
 ```
 
 - Requires Python 3.9 or later
@@ -13,7 +13,7 @@ python -m pip install wifi-qrcode-generator
 ## Usage
 
 ```sh
-wifi-qrcode-generator [-h] --output OUTPUT --ssid SSID --password PASSWORD --alg {WEP,WPA,nopass} [--random-password] [--verbose]
+simple-wifi-qrcode [-h] --output OUTPUT --ssid SSID --password PASSWORD --alg {WEP,WPA,nopass} [--random-password] [--verbose]
 
 options:
   -h, --help               show this help message and exit

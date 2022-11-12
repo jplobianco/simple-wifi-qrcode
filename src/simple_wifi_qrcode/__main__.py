@@ -1,5 +1,5 @@
 import argparse
-from wifi_qrcode_generator import qrcode
+from simple_wifi_qrcode import qrcode
 
 
 def main():

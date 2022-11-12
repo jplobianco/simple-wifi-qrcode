@@ -1,6 +1,6 @@
-""" Tests for wifi_qrcode_generator.wifi """
+""" Tests for simple_wifi_qrcode.wifi """
 
-from wifi_qrcode_generator.wifi import wifi_join_string
+from simple_wifi_qrcode.wifi import wifi_join_string
 
 
 def test_wifi_join_string__with__ssid__password__alg():

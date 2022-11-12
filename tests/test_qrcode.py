@@ -1,8 +1,8 @@
-""" Tests for wifi_qrcode_generator.wifi """
+""" Tests for simple_wifi_qrcode.wifi """
 
 from unittest.mock import patch
 import cv2
-from wifi_qrcode_generator.qrcode import generate_wifi_qrcode
+from simple_wifi_qrcode.qrcode import generate_wifi_qrcode
 
 
 def test_generate_wifi_qrcode__with__verbose__and__without__random_password(
@@ -35,7 +35,7 @@ def test_generate_wifi_qrcode__with__verbose__and__without__random_password(
 
 
 def test_generate_wifi_qrcode__with__random_password__and__without__verbose(capsys):
-    with patch("wifi_qrcode_generator.qrcode._random_hex") as random_hex_mock:
+    with patch("simple_wifi_qrcode.qrcode._random_hex") as random_hex_mock:
         # GIVEN
         ssid = "net1"
         alg = "WPA"

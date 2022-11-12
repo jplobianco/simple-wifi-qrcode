@@ -3,7 +3,7 @@ requires      = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "wifi-qrcode-generator"
+name = "simple-wifi-qrcode"
 version = "1.0.0"
 description = "Generates a QRCode to join wifi networks by scanning it"
 readme = "README.md"
@@ -24,10 +24,10 @@ requires-python = ">=3.9"
 dev = ["black", "bumpver", "isort", "pip-tools", "pytest", "opencv-python"]
 
 [project.urls]
-Homepage = "https://github.com/jplobianco/wifi_qrcode_generator"
+Homepage = "https://github.com/jplobianco/simple-wifi-qrcode"
 
 [project.scripts]
-wifi-qrcode-generator = "wifi_qrcode_generator.__main__:main"
+simple-wifi-qrcode = "simple_wifi_qrcode.__main__:main"
 
 [tool.bumpver]
 current_version = "1.0.0"
@@ -42,4 +42,4 @@ push = false
     'current_version = "{version}"', 'version = "{version}"'
 ]
 
-"src/wifi_qrcode_generator/__init__.py" = ['__version__ = "{version}"']
+"src/simple_wifi_qrcode/__init__.py" = ['__version__ = "{version}"']
