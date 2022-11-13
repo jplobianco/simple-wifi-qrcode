@@ -17,6 +17,8 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         go-version: '^1.13.1'
+      run: go version
+    - name: Generate Changelog
       run: |
         go install github.com/rhysd/changelog-from-release/v3@latest
         changelog-from-release >> CHANGELOG.md
