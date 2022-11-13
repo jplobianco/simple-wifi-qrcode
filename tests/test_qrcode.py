@@ -38,15 +38,15 @@ def test_generate_wifi_qrcode__with__verbose__and__without__random_password(
 
 def test_generate_wifi_qrcode__with__random_password__and__without__verbose(capsys):
     """Tests generate_wifi_qrcode with random password and no verbose"""
-    with patch("simple_wifi_qrcode.qrcode._random_hex") as random_hex_mock:
+    with patch("simple_wifi_qrcode.qrcode.token_hex") as token_hex_mock:
         # GIVEN
         ssid = "net1"
         alg = "WPA"
         verbose = False
         output = "output.png"
-        random_hex_password = "0123456789ab"
-        random_hex_mock.return_value = random_hex_password
-        expected = f"WIFI:T:WPA;S:net1;P:{random_hex_password};H:;"
+        token_hex_password = "0123456789ab"
+        token_hex_mock.return_value = token_hex_password
+        expected = f"WIFI:T:WPA;S:net1;P:{token_hex_password};H:;"
         expected_verbose_output = ""
 
         # WHEN

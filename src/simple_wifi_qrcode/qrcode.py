@@ -1,7 +1,7 @@
 """Utility functions to create QR Code to join wifi networks"""
 
 import os
-import random
+from secrets import token_hex
 
 import qrcode as qrcode_lib
 
@@ -19,8 +19,7 @@ def generate_wifi_qrcode(
     """Generates QR Code to join a wifi network and save it to a PNG file"""
 
     if random_password:
-        password = _random_hex(12)
-
+        password = token_hex(12)
     content: str = wifi.wifi_join_string(ssid, password, alg)
     qrcode_img = qrcode_lib.make(content)
     qrcode_img.save(os.path.join(os.getcwd(), output))
@@ -34,7 +33,3 @@ def generate_wifi_qrcode(
              \n--------------------------------------
              \nScan the QR Code with your camera to join {ssid}network."""
         )
-
-
-def _random_hex(str_len: int) -> str:
-    return "".join((random.choice("abcdefABCDEF0123456789") for _ in range(str_len)))
