@@ -1,8 +1,11 @@
+""" Call generate_wifi_qrcode on package execution """
+
 import argparse
 from simple_wifi_qrcode import qrcode
 
 
 def main():
+    """Retrieve args and call generate_wifi_qrcode"""
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--output",

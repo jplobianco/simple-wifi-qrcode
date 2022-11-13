@@ -4,6 +4,8 @@ from simple_wifi_qrcode.wifi import wifi_join_string
 
 
 def test_wifi_join_string__with__ssid__password__alg():
+    """Test wifi join string with ssid, password and alg"""
+
     # GIVEN
     ssid = "net1"
     password = "pass1"
@@ -18,6 +20,8 @@ def test_wifi_join_string__with__ssid__password__alg():
 
 
 def test_wifi_join_string__with__ssid__password__and__without__alg():
+    """Test wifi join string with ssid, password and no alg"""
+
     # GIVEN
     ssid = "net1"
     password = "pass1"

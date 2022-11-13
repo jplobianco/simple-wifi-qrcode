@@ -7,7 +7,7 @@ import qrcode as qrcode_lib
 
 from simple_wifi_qrcode import wifi
 
-
+# pylint: disable-msg=too-many-arguments
 def generate_wifi_qrcode(
     ssid: str,
     password: str = None,
@@ -36,5 +36,5 @@ def generate_wifi_qrcode(
         )
 
 
-def _random_hex(len: int) -> str:
-    return "".join((random.choice("abcdefABCDEF0123456789") for _ in range(12)))
+def _random_hex(str_len: int) -> str:
+    return "".join((random.choice("abcdefABCDEF0123456789") for _ in range(str_len)))

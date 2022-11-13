@@ -8,6 +8,8 @@ from simple_wifi_qrcode.qrcode import generate_wifi_qrcode
 def test_generate_wifi_qrcode__with__verbose__and__without__random_password(
     capsys,
 ):
+    """Tests generate_wifi_qrcode with verbose and no random password"""
+
     # GIVEN
     ssid = "net1"
     password = "pass1"
@@ -35,6 +37,7 @@ def test_generate_wifi_qrcode__with__verbose__and__without__random_password(
 
 
 def test_generate_wifi_qrcode__with__random_password__and__without__verbose(capsys):
+    """Tests generate_wifi_qrcode with random password and no verbose"""
     with patch("simple_wifi_qrcode.qrcode._random_hex") as random_hex_mock:
         # GIVEN
         ssid = "net1"
@@ -68,11 +71,7 @@ def _read_qrcode(filename: str):
         qr (string): Value from QR code
     """
 
-    try:
-        img = cv2.imread(filename)
-        detect = cv2.QRCodeDetector()
-        value, _, _ = detect.detectAndDecode(img)
-        return value
-    except Exception as err:
-        print(err)
-        return
+    img = cv2.imread(filename)
+    detect = cv2.QRCodeDetector()
+    value, _, _ = detect.detectAndDecode(img)
+    return value
