@@ -24,3 +24,10 @@ options:
   --random-password        Generate a random password for the network
   --verbose                Print verbose information
 ```
+
+## Docker
+
+```sh
+# sample creating a PNG QR Code file using Docker
+docker run --rm -v qrcodes:/app/src/qrcodes  jplobianco/simple-wifi-qrcode --output qrcodes/output.png --ssid net1 --password pass1 --alg WPA --verbose
+```

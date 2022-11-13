@@ -1,0 +1,7 @@
+dist/
+.venv/
+.pytest_cache/
+.dccache/
+*.png
+.git/
+__pycache__/
