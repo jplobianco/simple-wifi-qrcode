@@ -16,4 +16,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install bandit
     - name: Run Bandit
-      run: bandit -r .
+      run: bandit -c bandit.yml -r .
