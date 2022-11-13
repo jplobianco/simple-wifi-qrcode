@@ -152,7 +152,7 @@ cython_debug/
 #.idea/
 
 
-# Visual Studio Code 
+# Visual Studio Code
 .vscode/
 
 .dccache
