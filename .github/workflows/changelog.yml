@@ -1,0 +1,24 @@
+name: Generate Changelog
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  changelog:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-go@v3
+      with:
+        go-version: '^1.13.1'
+      run: go version
+    - name: Generate Changelog
+      run: |
+        go install github.com/rhysd/changelog-from-release/v3@latest
+        changelog-from-release >> CHANGELOG.md
